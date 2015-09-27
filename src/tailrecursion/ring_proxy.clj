@@ -46,6 +46,7 @@
                      :throw-exceptions false
                      :as :stream} http-opts)
              request
+             (update :headers dissoc "Transfer-Encoding")
              prepare-cookies))
        (handler req)))))
 
